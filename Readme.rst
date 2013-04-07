@@ -11,11 +11,11 @@ install the bare minimum through packages, and have the newest versions of both
 vagrant & salty vagrant from their respective online repos.
 
 We'll need the following to continue:
-	* Virtualbox (I'm using 4.2.10)
-	* ruby gem
-	* Salt Stack 
-	* salty-vagrant
-	* A text editor of your choice.
+	* `Virtualbox <http://virtualbox.org>`_ (I'm using 4.2.10)
+	* ruby gem 
+	* `Salt Stack <http://saltstack.org>`_ 
+	* `salty-vagrant <https://github.com/saltstack/salty-vagrant>`_
+	* A text editor of your choice. `Like this one<http://sublimetext.com>`_
 
 Now repeat after me:
 Salt Stack is amazing!  It's simply Python & YAML & Jinja2 (oh my!).  All 
@@ -30,7 +30,7 @@ Ruby with a little bit of Python magic.
 
 .. code-block:: console
 
-    sudo apt-add-repository ppa:saltstack/salt
+    $ sudo apt-add-repository ppa:saltstack/salt
     You are about to add the following PPA to your system:
      Salt, the remote execution and configuration management tool.
      More info: https://launchpad.net/~saltstack/+archive/salt
@@ -45,5 +45,5 @@ Ruby with a little bit of Python magic.
     gpg:               imported: 1  (RSA: 1)
     OK
     
-    apt-get install gem
+    $ apt-get install gem
     
