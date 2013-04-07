@@ -62,9 +62,7 @@ salty vagrant `installation instructions <https://github.com/saltstack/salty-vag
 #. Install Vagrant
 #. Install Salty Vagrant (``vagrant plugin install vagrant-salt``)
 #. Get the Ubuntu 12.04 base box: ``vagrant box add precise64 http://files.vagrantup.com/precise64.box``
-#. Create/Update your ``Vagrantfile`` `(Detailed in Configuration) <https://github.com/saltstack/salty-vagrant#configuration>`_
+#. Create/Update your ``Vagrantfile`` `Detailed in Configuration <https://github.com/saltstack/salty-vagrant#configuration>`_
 #. Place your minion config in salt/minion 
+#. Run vagrant up and you should be good to go.
 
-Run vagrant up and you should be good to go.
-
-    
