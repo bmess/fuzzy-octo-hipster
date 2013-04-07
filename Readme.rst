@@ -11,12 +11,12 @@ install the bare minimum through packages, and have the newest versions of both
 vagrant & salty vagrant from their respective online repos.
 
 We'll need the following to continue:
-	* `Virtualbox <http://virtualbox.org>`_ (I'm using 4.2.10)
-	* ruby gem 
-	* `Salt Stack <http://saltstack.org>`_ 
-	* `salty vagrant <https://github.com/saltstack/salty-vagrant>`_
-      * salty vagrant `installation instructions <https://github.com/saltstack/salty-vagrant#masterless-quick-start>`_
-	* A text editor of your choice. `Like this one <http://sublimetext.com>`_
+    * `Virtualbox <http://virtualbox.org>`_ (I'm using 4.2.10)
+    * ruby gem 
+    * `Salt Stack <http://saltstack.org>`_ 
+    * `salty vagrant <https://github.com/saltstack/salty-vagrant>`_
+        * salty vagrant `installation instructions <https://github.com/saltstack/salty-vagrant#masterless-quick-start>`_
+    * A text editor of your choice. `Like this one <http://sublimetext.com>`_
 
 Now repeat after me:
 Salt Stack is amazing!  It's simply Python & YAML & Jinja2 (oh my!).  All 
@@ -63,7 +63,8 @@ salty vagrant `installation instructions <https://github.com/saltstack/salty-vag
 #. Install Salty Vagrant (``vagrant plugin install vagrant-salt``)
 #. Get the Ubuntu 12.04 base box: ``vagrant box add precise64 http://files.vagrantup.com/precise64.box``
 #. Create/Update your ``Vagrantfile`` `(Detailed in Configuration) <https://github.com/saltstack/salty-vagrant#configuration>`_
-#. Place your minion config in salt/minion [1]
+#. Place your minion config in salt/minion 
+
 Run vagrant up and you should be good to go.
 
     
