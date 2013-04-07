@@ -59,11 +59,11 @@ the easy to read instructions would be beneficial to everyone involved:
 
 salty vagrant `installation instructions <https://github.com/saltstack/salty-vagrant#masterless-quick-start>`_
 
-# Install Vagrant
-# Install Salty Vagrant (`vagrant plugin install vagrant-salt`)
-# Get the Ubuntu 12.04 base box: `vagrant box add precise64 http://files.vagrantup.com/precise64.box`
-# Create/Update your `Vagrantfile` `(Detailed in Configuration) <https://github.com/saltstack/salty-vagrant#configuration>`_
-# Place your minion config in salt/minion [1]
+#. Install Vagrant
+#. Install Salty Vagrant (``vagrant plugin install vagrant-salt``)
+#. Get the Ubuntu 12.04 base box: ``vagrant box add precise64 http://files.vagrantup.com/precise64.box``
+#. Create/Update your ``Vagrantfile`` `(Detailed in Configuration) <https://github.com/saltstack/salty-vagrant#configuration>`_
+#. Place your minion config in salt/minion [1]
 Run vagrant up and you should be good to go.
 
     
