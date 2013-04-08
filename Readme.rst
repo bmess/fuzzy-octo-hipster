@@ -100,6 +100,7 @@ Create the Salt state directory, and let's create the top file:
 Now we can create a basic Salt state:
 
 top.sls:
+
 .. code-block :: yaml
 
     base:
