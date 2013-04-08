@@ -54,11 +54,15 @@ Ruby with a little bit of Python magic.
     # gem will handle getting the latest vagrant & salty-vagrant
     $ sudo gem install vagrant
 
+`salty-vagrant` Install
+-----------------------
+
 Now you should know I could tell you how to install salty-vagrant, but following 
 the easy to read instructions would be beneficial to everyone involved:
 
 salty vagrant `installation instructions <https://github.com/saltstack/salty-vagrant#masterless-quick-start>`_
 
+Copy/pasted from the link above:
 #. Install Vagrant
 #. Install Salty Vagrant (``vagrant plugin install vagrant-salt``)
 #. Get the Ubuntu 12.04 base box: ``vagrant box add precise64 http://files.vagrantup.com/precise64.box``
@@ -66,3 +70,41 @@ salty vagrant `installation instructions <https://github.com/saltstack/salty-vag
 #. Place your minion config in salt/minion 
 #. Run vagrant up and you should be good to go.
 
+You can try starting now, but you'll run into errors about the missing Salt Stack 
+states.  Proceed to the next section to make this all **real**.
+
+Fun and Excitement at 100 MPH
+=============================
+
+By now you should have the pieces in place to be able to begin a Vagrant-powered 
+virtual machine.  Now we're going to move into the fun part:  automating the 
+environment for our purposes.
+
+We begin with the following:
+
+.. code-block :: console
+
+    .
+    ├── Readme.rst
+    └── Vagrantfile
+
+Sounds like we need to build our Salt part.
+
+Create the Salt state directory, and let's create the top file:
+
+.. code-block :: console
+
+    $ mkdir -p salt/roots/
+    $ touch salt/root/top.sls
+
+Now we can create a basic Salt state:
+
+top.sls:
+.. code-block :: yaml
+
+    base:
+      '*':
+        - vim
+      'role : dev':
+        - match: grain
+        - apache
