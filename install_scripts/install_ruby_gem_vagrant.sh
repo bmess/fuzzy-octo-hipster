@@ -21,7 +21,7 @@ then
 else
     echo "32 bit detected"
     # Now *in gem*, install vagrant
-    if [ -f ./vagrant_x86.deb ];
+    if [ -f ./vagrant_i686.deb ];
     then
         echo "file exists, trying to install now"
         sudo dpkg --install vagrant_x86_64.deb
