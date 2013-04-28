@@ -23,9 +23,11 @@ Hard Way
 Do this from scratch.  Follow the installation instructions from the readme on 
 `the salty-vagrant github <https://github.com/saltstack/salty-vagrant>`_
 
+Repeat After Me
+---------------
 Now repeat after me:
 Salt Stack is amazing!  It's simply Python & YAML & Jinja2 (oh my!).  All 
-magic within Salt Stack may be unlocked by reading the documentation.
+magic within Salt Stack may be unlocked by reading `the documentation. <http://docs.saltstack.com>`_
 
 The Hard Way
 ============
