@@ -72,7 +72,6 @@ Now enter the box:
 .. code-block :: console
  
  user@host~/fuzzy-octo-hipster/$ vagrant ssh
- user@host~/fuzzy-octo-hipster/$ vagrant ssh
  Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic x86_64)
  
 * Documentation:  https://help.ubuntu.com/
