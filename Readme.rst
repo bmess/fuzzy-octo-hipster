@@ -29,6 +29,33 @@ Now repeat after me:
 Salt Stack is amazing!  It's simply Python & YAML & Jinja2 (oh my!).  All 
 magic within Salt Stack may be unlocked by reading `the documentation. <http://docs.saltstack.com>`_
 
+The Easy Way
+============
+Clone the git repo:
+
+.. code-block :: console
+
+ user@host ~$ git clone git@github.com:bmess/fuzzy-octo-hipster
+ user@host ~$ git clone git@github.com:/bmess/fuzzy-octo-hipster
+ Cloning into 'fuzzy-octo-hipster'...
+ remote: Counting objects: 84, done.
+ remote: Compressing objects: 100% (66/66), done.
+ remote: Total 84 (delta 27), reused 49 (delta 4)
+ Receiving objects: 100% (84/84), 16.35 KiB, done.
+ Resolving deltas: 100% (27/27), done.
+ user@host ~$ 
+
+Now let's install things.  If you don't trust the scripts asking for sudo, take a moment to review them and see it's just a few installation statements
+
+.. code-block :: console
+
+ cd install_scripts
+ user@host~/fuzzy-octo-hipster/install_scripts$ ls
+ install_ruby_gem_vagrant.sh  install_salty_vagrant.sh
+ user@host~/fuzzy-octo-hipster/install_scripts$ ./install_ruby_gem_vagrant.sh 
+ user@host~/fuzzy-octo-hipster/install_scripts$ ./install_salty_vagrant.sh 
+
+
 The Hard Way
 ============
 
@@ -84,6 +111,7 @@ the easy to read instructions would be beneficial to everyone involved:
 salty vagrant `installation instructions <https://github.com/saltstack/salty-vagrant#masterless-quick-start>`_
 
 Copy/pasted from the link above:
+
 #. Install Vagrant
 #. Install Salty Vagrant (``vagrant plugin install vagrant-salt``)
 #. Get the Ubuntu 12.04 base box: ``vagrant box add precise64 http://files.vagrantup.com/precise64.box``
