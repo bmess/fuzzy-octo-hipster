@@ -74,7 +74,7 @@ Now enter the box:
  user@host~/fuzzy-octo-hipster/$ vagrant ssh
  Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic x86_64)
  
-* Documentation:  https://help.ubuntu.com/
+ * Documentation:  https://help.ubuntu.com/
  Welcome to your Vagrant-built virtual machine.
  last login: Fri Sep 14 06:23:18 2012 from 10.0.2.2
  vagrant@precise64:~$ 
