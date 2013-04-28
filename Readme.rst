@@ -10,24 +10,43 @@ the package names may change between different distributions.  Our goal is to
 install the bare minimum through packages, and have the newest versions of both 
 vagrant & salty vagrant from their respective online repos.
 
-We'll need the following to continue:
-    * `Virtualbox <http://virtualbox.org>`_ (I'm using 4.2.10)
-    * ruby gem 
-    * `Salt Stack <http://saltstack.org>`_ 
-    * `salty vagrant <https://github.com/saltstack/salty-vagrant>`_
-        * salty vagrant `installation instructions <https://github.com/saltstack/salty-vagrant#masterless-quick-start>`_
-    * A text editor of your choice. `Like this one <http://sublimetext.com>`_
+There is an easy way and a hard way:
+
+Easy Way
+--------
+This repo was designed as a shortcut to getting your feet wet with Salt Stack 
+& *masterless-minions*.  You should be able to clone this repo, enter the 
+directory and run the two installation scripts localted in ``install_scripts`` 
+
+Hard Way
+--------
+Do this from scratch.  Follow the installation instructions from the readme on 
+`the salty-vagrant github <https://github.com/saltstack/salty-vagrant>`_
 
 Now repeat after me:
 Salt Stack is amazing!  It's simply Python & YAML & Jinja2 (oh my!).  All 
 magic within Salt Stack may be unlocked by reading the documentation.
 
-Installing All the Goodies
-==========================
+The Hard Way
+============
+
+We'll need the following to continue:
+    * `Virtualbox <http://virtualbox.org>`_ (I'm using 4.2.10)
+    * Ruby gem 
+    * `Salt Stack <http://saltstack.org>`_
+    * `salty vagrant <https://github.com/saltstack/salty-vagrant>`_
+        * salty vagrant `installation instructions <https://github.com/saltstack/salty-vagrant#masterless-quick-start>`_ (We'll install it from vagrant)
+    * A text editor of your choice. `Like this one <http://sublimetext.com>`_
+
 
 Recap:  this is all done on *Ubuntu Desktop 12.10*.  I have every bit of faith 
 that this will function on any other setup so long as you have Virtualbox and 
 Ruby with a little bit of Python magic.
+
+Salt Stack is OS agnostic (with some caveats on Windows), and will run on Linux,
+FreeBSD, and Windows.
+
+Let's add Salt to our Ubuntu repo list.  If you have a non-Debian based system it's time to `look here instead <http://docs.saltstack.com/topics/installation/index.html>`_:
 
 .. code-block:: console
 
@@ -54,8 +73,8 @@ Ruby with a little bit of Python magic.
     # gem will handle getting the latest vagrant & salty-vagrant
     $ sudo gem install vagrant
 
-`salty-vagrant` Install
------------------------
+``salty-vagrant`` Install
+-------------------------
 
 Now you should know I could tell you how to install salty-vagrant, but following 
 the easy to read instructions would be beneficial to everyone involved:
@@ -94,25 +113,46 @@ Create the Salt state directory, and let's create the top file:
 
 .. code-block :: console
 
-    $ mkdir -p salt/roots/
-    $ touch salt/root/top.sls
+    $ mkdir -p salt/roots/salt
+    $ touch salt/roots/salt/top.sls
 
-Now we can create a basic Salt state:
+We should now have the following tree:
 
-top.sls:
+.. code-block :: console
+
+ .
+ ├── install_scripts
+ │   ├── install_ruby_gem_vagrant.sh
+ │   └── install_salty_vagrant.sh
+ ├── Readme.rst
+ ├── salt
+ │   ├── minion
+ │   └── roots
+ │       └── salt
+ │           ├── top.sls
+ │           └── vim.sls
+ ├── TODO.rst
+ └── Vagrantfile
+
+
+
+Now we can create a basic Salt *state*:
+
+``top.sls``:
 
 .. code-block :: yaml
 
     # 'base' is an environment, don't worry about it for now.
     base:
 
-      # We're saying "everyone" should run the 'vim' salt state we're about to 
+      # We're saying "everyone" ('*') should run the 'vim' salt state we're about to 
       # create.
       '*':
         - vim
 
       # Now we're stating all minions with the 'dev' role, run the following
-      # salt state.
+      # salt state.  This state is called apache and it'll install the apache2 
+      # HTTP server
       'role : dev':
         - match: grain
         - apache
