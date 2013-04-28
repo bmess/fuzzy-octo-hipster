@@ -5,7 +5,7 @@
 # Install gem
 sudo apt-get install gem ruby-dev
 
-if [ $(uname) == 'x86_64' ];
+if [ $(uname -m) == 'x86_64' ];
 then
     echo "64 bit detected"
     # Now *in gem*, install vagrant
