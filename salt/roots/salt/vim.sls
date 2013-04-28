@@ -5,3 +5,4 @@ vim:
   pkg:
     # installed is a method of the pkg state that says "install me!"
     - installed
+    - name: vim
