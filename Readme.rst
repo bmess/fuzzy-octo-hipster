@@ -150,8 +150,8 @@ states.  Proceed to the next section to make this all **real**.
 Fun and Excitement at 100 MPH
 =============================
 
-By now you should have the pieces in place to be able to begin a Vagrant-powered 
-virtual machine.  Now we're going to move into the fun part:  automating the 
+By now you should have the pieces in place to be able to begin a Vagrant-powered
+virtual machine.  Now we're going to move into the fun part:  automating the
 environment for our purposes.
 
 We begin with the following:
@@ -190,7 +190,6 @@ We should now have the following tree:
  └── Vagrantfile
 
 
-
 Now we can create a basic Salt *state*:
 
 ``top.sls``:
@@ -200,13 +199,13 @@ Now we can create a basic Salt *state*:
     # 'base' is an environment, don't worry about it for now.
     base:
 
-      # We're saying "everyone" ('*') should run the 'vim' salt state we're about to 
-      # create.
+      # We're saying "everyone" ('*') should run the 'vim' salt state we're
+      # about to create.
       '*':
         - vim
 
       # Now we're stating all minions with the 'dev' role, run the following
-      # salt state.  This state is called apache and it'll install the apache2 
+      # salt state.  This state is called apache and it'll install the apache2
       # HTTP server
       'role : dev':
         - match: grain
