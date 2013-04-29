@@ -58,6 +58,7 @@ Now let's install things.  If you don't trust the scripts asking for sudo, take 
 Now it's time to startup the vagrant box!
 
 .. code-block :: console
+
  user@host~/fuzzy-octo-hipster/$ vagrant up
  Bringing machine 'default' up with 'virtualbox' provider...
  [default] Importing base box 'precise64'...
