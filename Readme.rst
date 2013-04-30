@@ -5,10 +5,11 @@ Masterless SaltStack Minion with Salty Vagrant
 Before You Begin
 ================
 
-All of this was tried on *Ubuntu Desktop 12.10*.  There's an expectation that
-the package names may change between different distributions.  Our goal is to
-install the bare minimum through packages, and have the newest versions of both
-vagrant & salty vagrant from their respective online repos.
+All of this was tried on *Ubuntu Desktop 12.10*, and *Ubuntu Desktop 13.04*.  
+There's an expectation that the package names may change between different 
+distributions.  Our goal is to install the bare minimum through packages, 
+and have the newest versions of both vagrant & salty vagrant from their 
+respective online repos.
 
 Repeat After Me
 ---------------
@@ -23,7 +24,7 @@ The Easy Way
 This repo was designed as a shortcut to getting your feet wet with SaltStack &
 *masterless-minions*.
 
-1. Clone the git repo:
+#. Clone the git repo:
 
 .. code-block :: console
 
@@ -36,7 +37,7 @@ This repo was designed as a shortcut to getting your feet wet with SaltStack &
  Receiving objects: 100% (84/84), 16.35 KiB, done.
  Resolving deltas: 100% (27/27), done.
 
-2. Now let's install things.  If you don't trust the scripts asking for sudo,
+#. Now let's install things.  If you don't trust the scripts asking for sudo,
    take a moment to review them and see it's just a few installation statements.
 
 .. code-block :: console
@@ -47,7 +48,7 @@ This repo was designed as a shortcut to getting your feet wet with SaltStack &
  user@host~/fuzzy-octo-hipster/install_scripts$ ./install_ruby_gem_vagrant.sh
  user@host~/fuzzy-octo-hipster/install_scripts$ ./install_salty_vagrant.sh
 
-3. Now it's time to startup the vagrant box!
+#. Now it's time to startup the vagrant box!
 
 .. code-block :: console
 
@@ -60,7 +61,7 @@ This repo was designed as a shortcut to getting your feet wet with SaltStack &
  Salt successfully configured and installed!
  Calling state.highstate... (this may take a while)
 
-4. Now enter the box:
+#. Now enter the box:
 
 .. code-block :: console
 
@@ -72,7 +73,7 @@ This repo was designed as a shortcut to getting your feet wet with SaltStack &
  last login: Fri Sep 14 06:23:18 2012 from 10.0.2.2
  vagrant@precise64:~$
 
-5. Welcome to Salt!
+#. Welcome to Salt!
 
 
 The Hard Way
