@@ -5,11 +5,10 @@ Masterless SaltStack Minion with Salty Vagrant
 Before You Begin
 ================
 
-All of this was tried on *Ubuntu Desktop 12.10*, and *Ubuntu Desktop 13.04*.  
-There's an expectation that the package names may change between different 
-distributions.  Our goal is to install the bare minimum through packages, 
-and have the newest versions of both vagrant & salty vagrant from their 
-respective online repos.
+All of this was tried on *Ubuntu Desktop 12.10*.  There's an expectation that
+the package names may change between different distributions.  Our goal is to
+install the bare minimum through packages, and have the newest versions of both
+vagrant & salty vagrant from their respective online repos.
 
 Repeat After Me
 ---------------
@@ -24,44 +23,44 @@ The Easy Way
 This repo was designed as a shortcut to getting your feet wet with SaltStack &
 *masterless-minions*.
 
-#. Clone the git repo:
+1. Clone the git repo:
 
- .. code-block :: console
+.. code-block :: console
 
-  user@host ~$ git clone git@github.com:bmess/fuzzy-octo-hipster
-  user@host ~$ git clone git@github.com:/bmess/fuzzy-octo-hipster
-  Cloning into 'fuzzy-octo-hipster'...
-  remote: Counting objects: 84, done.
-  remote: Compressing objects: 100% (66/66), done.
-  remote: Total 84 (delta 27), reused 49 (delta 4)
-  Receiving objects: 100% (84/84), 16.35 KiB, done.
-  Resolving deltas: 100% (27/27), done.
- 
-#. Now let's install things.  If you don't trust the scripts asking for sudo,
+ user@host ~$ git clone git@github.com:bmess/fuzzy-octo-hipster
+ user@host ~$ git clone git@github.com:/bmess/fuzzy-octo-hipster
+ Cloning into 'fuzzy-octo-hipster'...
+ remote: Counting objects: 84, done.
+ remote: Compressing objects: 100% (66/66), done.
+ remote: Total 84 (delta 27), reused 49 (delta 4)
+ Receiving objects: 100% (84/84), 16.35 KiB, done.
+ Resolving deltas: 100% (27/27), done.
+
+2. Now let's install things.  If you don't trust the scripts asking for sudo,
    take a moment to review them and see it's just a few installation statements.
 
- .. code-block :: console
- 
-  user@host ~$ cd install_scripts
-  user@host~/fuzzy-octo-hipster/install_scripts$ ls
-  install_ruby_gem_vagrant.sh  install_salty_vagrant.sh
-  user@host~/fuzzy-octo-hipster/install_scripts$ ./install_ruby_gem_vagrant.sh
-  user@host~/fuzzy-octo-hipster/install_scripts$ ./install_salty_vagrant.sh 
- 
-#. Now it's time to startup the vagrant box!
+.. code-block :: console
 
- .. code-block :: console
+ user@host ~$ cd install_scripts
+ user@host~/fuzzy-octo-hipster/install_scripts$ ls
+ install_ruby_gem_vagrant.sh  install_salty_vagrant.sh
+ user@host~/fuzzy-octo-hipster/install_scripts$ ./install_ruby_gem_vagrant.sh
+ user@host~/fuzzy-octo-hipster/install_scripts$ ./install_salty_vagrant.sh
 
-  user@host~/fuzzy-octo-hipster/$ vagrant up
-  Bringing machine 'default' up with 'virtualbox' provider...
-  [default] Importing base box 'precise64'...
-  ...
-  salt-call was not found.
-  Bootstrapping Salt... (this may take a while)
-  Salt successfully configured and installed!
-  Calling state.highstate... (this may take a while)
+3. Now it's time to startup the vagrant box!
 
-#. Now enter the box:
+.. code-block :: console
+
+ user@host~/fuzzy-octo-hipster/$ vagrant up
+ Bringing machine 'default' up with 'virtualbox' provider...
+ [default] Importing base box 'precise64'...
+ ...
+ salt-call was not found.
+ Bootstrapping Salt... (this may take a while)
+ Salt successfully configured and installed!
+ Calling state.highstate... (this may take a while)
+
+4. Now enter the box:
 
 .. code-block :: console
 
@@ -73,7 +72,7 @@ This repo was designed as a shortcut to getting your feet wet with SaltStack &
  last login: Fri Sep 14 06:23:18 2012 from 10.0.2.2
  vagrant@precise64:~$
 
-#. Welcome to Salt!
+5. Welcome to Salt!
 
 
 The Hard Way
