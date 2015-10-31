@@ -2,6 +2,13 @@
 Masterless SaltStack Minion with Salty Vagrant
 ==============================================
 
+Warning
+=======
+
+This was originally written for an older version of Ubuntu Desktop Linux.  The
+contents in this repo initially did work.  Will need some work to get things
+fixed.
+
 Before You Begin
 ================
 
